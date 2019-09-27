@@ -1,0 +1,45 @@
+body{
+    background-color: white;
+}
+
+#sec-video{
+    height: calc(100vh - 200px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#sec-video video{
+    
+    height: 100%;
+
+}
+
+/* desktop */
+@media only screen and (max-width: 1200px)  {
+    #sec-video{
+        height: calc(100vh - 140px);
+    }
+}
+
+/* tablet */
+@media only screen and (max-width: 768px) {
+
+    #sec-video{
+        box-sizing: content-box;
+        padding-top: 56px;
+        height: calc(100vh - 56px);
+    }
+
+    #sec-video video{
+        height: auto;
+        width: 140%;
+    }
+}
+
+/* smalldevice */
+@media only screen and (max-width: 600px){
+
+}

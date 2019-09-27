@@ -1,0 +1,61 @@
+#sec-thinking{
+    padding-top: 97px;
+    width: 100%;
+    display: flex;
+
+    justify-content: flex-end;
+}
+
+.wrap-thinking{
+    display: flex;
+    justify-content: space-around;
+}
+
+.thinking-video{
+
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.thinking-video video{
+    width: 100%;
+}
+.thinking-text{
+    width: 338px;
+}
+
+.thinking-text h3{
+    margin-bottom: 2.5rem;
+}
+
+.thinking-text p{
+    margin-bottom: 1.8rem;
+}
+
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1200px)  {
+
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+
+}
+
+@media only screen and (max-width: 600px){
+    .wrap-thinking{
+        flex-direction: column;
+    }
+
+    .thinking-video{
+        margin-bottom: 3rem;
+    }
+
+    .thinking-video ,.thinking-text{
+        width: 100%;
+    }
+
+}

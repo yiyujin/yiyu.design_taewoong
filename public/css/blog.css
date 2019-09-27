@@ -1,0 +1,171 @@
+.posts{
+    padding-top: 50px;
+}
+
+.post{
+    padding: 1.5rem 0;
+}
+
+.display-none{
+    display: none;
+}
+
+.post a{
+    display: inline-block;
+    width: 100%;
+}
+
+.con-post{
+    width: 70%;
+    margin: auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.thumbnail{
+    background-color: rgb(224, 224, 224);
+    width: 150px;
+    height: 150px;
+}
+
+.post_img{
+    background-image: url("../_src/web/postthumbnail_sample.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.wrap-text{
+
+    position: relative;
+    width: calc(100% - 150px);
+    display: flex;
+    flex-wrap: wrap;
+
+    
+}
+
+.text-head{
+    text-align: right;
+    padding-right: 10px;
+    
+    line-height: 2.2rem;
+    font-size: 1.12rem;
+
+    width: 40%;
+}
+
+.text-head h3, 
+.text-head h4, 
+.text-head p,
+.text-body p:first-of-type{
+    height: 2.2rem;
+    overflow: hidden;
+} 
+
+.text-body p:last-of-type{
+    overflow: hidden;
+}
+
+.text-head h3{
+    font-weight: border;
+    height: 2.2rem;
+}
+.text-head h4{
+    font-weight: 400;
+}
+.text-head p{
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+.text-body{
+
+    width: 60%;
+
+    padding-left: 10px;
+    line-height: 2.2rem;
+    font-size: 1.12rem;
+}
+
+.text-body p span{
+    font-weight: bold;
+}
+.text-body p{
+    font-weight: 400;
+}
+
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1200px)  {
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+    .con-post{
+        width: 90%;
+    }
+    .post:first-child{
+        padding-top: 80px;
+    }
+    .wrap-text{
+        flex-direction: column;
+    }
+    .text-head, .text-body{
+        width: 100%;
+    }
+    .thumbnail{
+        width: 80px;
+        height: 80px;
+    }
+    .wrap-text{
+        width: calc(100% - 80px);
+    }
+    .text-head{
+        padding-left: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: left;
+        overflow: hidden;
+        line-height: 1.5rem;
+    }
+
+    .wrap-title{
+        width: 100%;
+    }
+    .wrap-title:after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    .post_title, .post_subtitle{
+        float: left;
+    }
+
+    .post_subtitle{
+        padding-left: 0.5rem;
+        overflow: hidden;
+        white-space: nowrap; 
+        text-overflow: ellipsis;
+    }
+    .post_data{
+        width: 100%;
+    }
+
+    .text-head h3, 
+    .text-head h4, 
+    .text-head p,
+    .text-body p{
+        font-size: 0.75rem;
+        height: 1.5rem;
+    }
+
+}
+@media only screen and (max-width: 600px){
+
+}
+    
