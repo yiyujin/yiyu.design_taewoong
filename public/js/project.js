@@ -1,5 +1,4 @@
 window.onload = function(){
-    let projects;
     makePjBg();
 }
 
@@ -36,9 +35,10 @@ makePjBg = async () =>{
         project_clone.querySelector('.title').innerHTML = el.title;
         project_clone.querySelector('.descript').innerHTML = el.descript;
 
-        const imageURL = `url(./src/projects/${el.title}/thumbnail.png)`;
-        project_clone.style.backgroundImage = imageURL;
+        const URL = `./src/projects/${el.title}/`;
+        const imageURL = `url(${URL}thumbnail.jpeg), url(${URL}thumbnail.jpg), url(${URL}thumbnail.png)`;
 
+        project_clone.style.backgroundImage = imageURL;
         project_clone.contents = el.contents;
 
         // width_x2
@@ -95,8 +95,15 @@ showDetail = (e) => {
 
             el = document.createElement('img');
             el.alt = list.src;
-            const imgURL = `src/projects/${target_project.title}/img-${changeNumber(count_img)}.png`;
-            el.src = imgURL;
+            const imgURL = `src/projects/${target_project.title}/img-${changeNumber(count_img)}`;
+            
+            el.src = `${imgURL}.png`;
+            el.onerror= () => {
+                el.src = `${imgURL}.jpeg`;
+                el.onerror = () => {
+                    el.src = `${imgURL}.jpg`;
+                }
+            }
         }
 
         el.innerHTML = list.src;
@@ -149,10 +156,8 @@ hidePjGuides_top = () =>{
     const projects = document.querySelectorAll('.project');
     let count = 0;
     projects.forEach(function (e) {
-        console.log(e);
         if (count < 4) {
             const targets = e.querySelectorAll('.top');
-            console.log(targets);
             const targets_x2 = e.querySelectorAll('.top-line');
             
             targets.forEach(function (target) {
