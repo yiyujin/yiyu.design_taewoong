@@ -4,7 +4,7 @@ let articles = {};
 
 _get = () => {
     // 20개 까지 우선 출력
-    return fetch('https://brunch.co.kr/ready')
+    return fetch('https://brunch.co.kr/@jinbread')
         .then(res => res.json())
         .then(res => res.data.list)
         .catch(err => console.log(err))
